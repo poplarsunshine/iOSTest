@@ -1,0 +1,580 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2BA77BAC20AEC04E001FBC66 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA77BAB20AEC04E001FBC66 /* AppDelegate.m */; };
+		2BA77BAF20AEC04F001FBC66 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA77BAE20AEC04F001FBC66 /* ViewController.m */; };
+		2BA77BB220AEC04F001FBC66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BA77BB020AEC04F001FBC66 /* Main.storyboard */; };
+		2BA77BB420AEC051001FBC66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BA77BB320AEC051001FBC66 /* Assets.xcassets */; };
+		2BA77BB720AEC051001FBC66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BA77BB520AEC051001FBC66 /* LaunchScreen.storyboard */; };
+		2BA77BBA20AEC051001FBC66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA77BB920AEC051001FBC66 /* main.m */; };
+		2BA77BC420AEC051001FBC66 /* OpenTheDoorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA77BC320AEC051001FBC66 /* OpenTheDoorTests.m */; };
+		2BA77BCF20AEC051001FBC66 /* OpenTheDoorUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA77BCE20AEC051001FBC66 /* OpenTheDoorUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2BA77BC020AEC051001FBC66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BA77B9F20AEC04E001FBC66 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BA77BA620AEC04E001FBC66;
+			remoteInfo = OpenTheDoor;
+		};
+		2BA77BCB20AEC051001FBC66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BA77B9F20AEC04E001FBC66 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BA77BA620AEC04E001FBC66;
+			remoteInfo = OpenTheDoor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2BA77BA720AEC04E001FBC66 /* OpenTheDoor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenTheDoor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BA77BAA20AEC04E001FBC66 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2BA77BAB20AEC04E001FBC66 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2BA77BAD20AEC04F001FBC66 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2BA77BAE20AEC04F001FBC66 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2BA77BB120AEC04F001FBC66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2BA77BB320AEC051001FBC66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2BA77BB620AEC051001FBC66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2BA77BB820AEC051001FBC66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BA77BB920AEC051001FBC66 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2BA77BBF20AEC051001FBC66 /* OpenTheDoorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenTheDoorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BA77BC320AEC051001FBC66 /* OpenTheDoorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenTheDoorTests.m; sourceTree = "<group>"; };
+		2BA77BC520AEC051001FBC66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BA77BCA20AEC051001FBC66 /* OpenTheDoorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenTheDoorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BA77BCE20AEC051001FBC66 /* OpenTheDoorUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenTheDoorUITests.m; sourceTree = "<group>"; };
+		2BA77BD020AEC051001FBC66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BA77BDC20AED756001FBC66 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2BA77BA420AEC04E001FBC66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BA77BBC20AEC051001FBC66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BA77BC720AEC051001FBC66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2BA77B9E20AEC04E001FBC66 = {
+			isa = PBXGroup;
+			children = (
+				2BA77BA920AEC04E001FBC66 /* OpenTheDoor */,
+				2BA77BC220AEC051001FBC66 /* OpenTheDoorTests */,
+				2BA77BCD20AEC051001FBC66 /* OpenTheDoorUITests */,
+				2BA77BA820AEC04E001FBC66 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2BA77BA820AEC04E001FBC66 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2BA77BA720AEC04E001FBC66 /* OpenTheDoor.app */,
+				2BA77BBF20AEC051001FBC66 /* OpenTheDoorTests.xctest */,
+				2BA77BCA20AEC051001FBC66 /* OpenTheDoorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2BA77BA920AEC04E001FBC66 /* OpenTheDoor */ = {
+			isa = PBXGroup;
+			children = (
+				2BA77BAA20AEC04E001FBC66 /* AppDelegate.h */,
+				2BA77BAB20AEC04E001FBC66 /* AppDelegate.m */,
+				2BA77BAD20AEC04F001FBC66 /* ViewController.h */,
+				2BA77BAE20AEC04F001FBC66 /* ViewController.m */,
+				2BA77BB020AEC04F001FBC66 /* Main.storyboard */,
+				2BA77BB320AEC051001FBC66 /* Assets.xcassets */,
+				2BA77BB520AEC051001FBC66 /* LaunchScreen.storyboard */,
+				2BA77BB820AEC051001FBC66 /* Info.plist */,
+				2BA77BB920AEC051001FBC66 /* main.m */,
+				2BA77BDC20AED756001FBC66 /* README.md */,
+			);
+			path = OpenTheDoor;
+			sourceTree = "<group>";
+		};
+		2BA77BC220AEC051001FBC66 /* OpenTheDoorTests */ = {
+			isa = PBXGroup;
+			children = (
+				2BA77BC320AEC051001FBC66 /* OpenTheDoorTests.m */,
+				2BA77BC520AEC051001FBC66 /* Info.plist */,
+			);
+			path = OpenTheDoorTests;
+			sourceTree = "<group>";
+		};
+		2BA77BCD20AEC051001FBC66 /* OpenTheDoorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2BA77BCE20AEC051001FBC66 /* OpenTheDoorUITests.m */,
+				2BA77BD020AEC051001FBC66 /* Info.plist */,
+			);
+			path = OpenTheDoorUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2BA77BA620AEC04E001FBC66 /* OpenTheDoor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BA77BD320AEC051001FBC66 /* Build configuration list for PBXNativeTarget "OpenTheDoor" */;
+			buildPhases = (
+				2BA77BA320AEC04E001FBC66 /* Sources */,
+				2BA77BA420AEC04E001FBC66 /* Frameworks */,
+				2BA77BA520AEC04E001FBC66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OpenTheDoor;
+			productName = OpenTheDoor;
+			productReference = 2BA77BA720AEC04E001FBC66 /* OpenTheDoor.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2BA77BBE20AEC051001FBC66 /* OpenTheDoorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BA77BD620AEC051001FBC66 /* Build configuration list for PBXNativeTarget "OpenTheDoorTests" */;
+			buildPhases = (
+				2BA77BBB20AEC051001FBC66 /* Sources */,
+				2BA77BBC20AEC051001FBC66 /* Frameworks */,
+				2BA77BBD20AEC051001FBC66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2BA77BC120AEC051001FBC66 /* PBXTargetDependency */,
+			);
+			name = OpenTheDoorTests;
+			productName = OpenTheDoorTests;
+			productReference = 2BA77BBF20AEC051001FBC66 /* OpenTheDoorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2BA77BC920AEC051001FBC66 /* OpenTheDoorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BA77BD920AEC051001FBC66 /* Build configuration list for PBXNativeTarget "OpenTheDoorUITests" */;
+			buildPhases = (
+				2BA77BC620AEC051001FBC66 /* Sources */,
+				2BA77BC720AEC051001FBC66 /* Frameworks */,
+				2BA77BC820AEC051001FBC66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2BA77BCC20AEC051001FBC66 /* PBXTargetDependency */,
+			);
+			name = OpenTheDoorUITests;
+			productName = OpenTheDoorUITests;
+			productReference = 2BA77BCA20AEC051001FBC66 /* OpenTheDoorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2BA77B9F20AEC04E001FBC66 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = hetao;
+				TargetAttributes = {
+					2BA77BA620AEC04E001FBC66 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					2BA77BBE20AEC051001FBC66 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 2BA77BA620AEC04E001FBC66;
+					};
+					2BA77BC920AEC051001FBC66 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 2BA77BA620AEC04E001FBC66;
+					};
+				};
+			};
+			buildConfigurationList = 2BA77BA220AEC04E001FBC66 /* Build configuration list for PBXProject "OpenTheDoor" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2BA77B9E20AEC04E001FBC66;
+			productRefGroup = 2BA77BA820AEC04E001FBC66 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2BA77BA620AEC04E001FBC66 /* OpenTheDoor */,
+				2BA77BBE20AEC051001FBC66 /* OpenTheDoorTests */,
+				2BA77BC920AEC051001FBC66 /* OpenTheDoorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2BA77BA520AEC04E001FBC66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BA77BB720AEC051001FBC66 /* LaunchScreen.storyboard in Resources */,
+				2BA77BB420AEC051001FBC66 /* Assets.xcassets in Resources */,
+				2BA77BB220AEC04F001FBC66 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BA77BBD20AEC051001FBC66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BA77BC820AEC051001FBC66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2BA77BA320AEC04E001FBC66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BA77BAF20AEC04F001FBC66 /* ViewController.m in Sources */,
+				2BA77BBA20AEC051001FBC66 /* main.m in Sources */,
+				2BA77BAC20AEC04E001FBC66 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BA77BBB20AEC051001FBC66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BA77BC420AEC051001FBC66 /* OpenTheDoorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BA77BC620AEC051001FBC66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BA77BCF20AEC051001FBC66 /* OpenTheDoorUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2BA77BC120AEC051001FBC66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BA77BA620AEC04E001FBC66 /* OpenTheDoor */;
+			targetProxy = 2BA77BC020AEC051001FBC66 /* PBXContainerItemProxy */;
+		};
+		2BA77BCC20AEC051001FBC66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BA77BA620AEC04E001FBC66 /* OpenTheDoor */;
+			targetProxy = 2BA77BCB20AEC051001FBC66 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2BA77BB020AEC04F001FBC66 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BA77BB120AEC04F001FBC66 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2BA77BB520AEC051001FBC66 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BA77BB620AEC051001FBC66 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2BA77BD120AEC051001FBC66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2BA77BD220AEC051001FBC66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2BA77BD420AEC051001FBC66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3FABDN9BMD;
+				INFOPLIST_FILE = OpenTheDoor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.myCom.OpenTheDoor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2BA77BD520AEC051001FBC66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3FABDN9BMD;
+				INFOPLIST_FILE = OpenTheDoor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.myCom.OpenTheDoor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2BA77BD720AEC051001FBC66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = OpenTheDoorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.myCom.OpenTheDoorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenTheDoor.app/OpenTheDoor";
+			};
+			name = Debug;
+		};
+		2BA77BD820AEC051001FBC66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = OpenTheDoorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.myCom.OpenTheDoorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenTheDoor.app/OpenTheDoor";
+			};
+			name = Release;
+		};
+		2BA77BDA20AEC051001FBC66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = OpenTheDoorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.myCom.OpenTheDoorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OpenTheDoor;
+			};
+			name = Debug;
+		};
+		2BA77BDB20AEC051001FBC66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = OpenTheDoorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.myCom.OpenTheDoorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OpenTheDoor;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2BA77BA220AEC04E001FBC66 /* Build configuration list for PBXProject "OpenTheDoor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BA77BD120AEC051001FBC66 /* Debug */,
+				2BA77BD220AEC051001FBC66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BA77BD320AEC051001FBC66 /* Build configuration list for PBXNativeTarget "OpenTheDoor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BA77BD420AEC051001FBC66 /* Debug */,
+				2BA77BD520AEC051001FBC66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BA77BD620AEC051001FBC66 /* Build configuration list for PBXNativeTarget "OpenTheDoorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BA77BD720AEC051001FBC66 /* Debug */,
+				2BA77BD820AEC051001FBC66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BA77BD920AEC051001FBC66 /* Build configuration list for PBXNativeTarget "OpenTheDoorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BA77BDA20AEC051001FBC66 /* Debug */,
+				2BA77BDB20AEC051001FBC66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2BA77B9F20AEC04E001FBC66 /* Project object */;
+}
