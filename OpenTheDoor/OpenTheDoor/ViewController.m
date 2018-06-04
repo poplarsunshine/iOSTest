@@ -23,6 +23,8 @@ typedef enum : NSUInteger {
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *tipLb;
+
 - (IBAction)btnAction:(id)sender;
 
 @end
@@ -116,9 +118,10 @@ typedef enum : NSUInteger {
     NSString *success = [result isEqualToString:@"[]"] ? @"成功" : @"失败";
     NSString *msg = [NSString stringWithFormat:@"开启%@%@", doorName, success];
 
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:msg preferredStyle:UIAlertControllerStyleAlert];
-    [alert addAction:([UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:nil])];
-    [self presentViewController:alert animated:YES completion:nil];
+    self.tipLb.text = msg;
+//    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:msg preferredStyle:UIAlertControllerStyleAlert];
+//    [alert addAction:([UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:nil])];
+//    [self presentViewController:alert animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
