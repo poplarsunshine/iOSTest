@@ -17,6 +17,7 @@
 		2B30B97F1EFBD32900F48E5E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B30B97E1EFBD32900F48E5E /* main.m */; };
 		2B30B9891EFBD32A00F48E5E /* ARSpriteDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B30B9881EFBD32A00F48E5E /* ARSpriteDemoTests.m */; };
 		2B30B9941EFBD32A00F48E5E /* ARSpriteDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B30B9931EFBD32A00F48E5E /* ARSpriteDemoUITests.m */; };
+		2B4D395520E1F899009D37EF /* message_icon_helijia@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B4D395420E1F898009D37EF /* message_icon_helijia@2x.png */; };
 		2B9E44AA20C692190088C5C4 /* img_loadiing_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B9E44A920C692190088C5C4 /* img_loadiing_1@2x.png */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		2B30B98F1EFBD32A00F48E5E /* ARSpriteDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARSpriteDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B30B9931EFBD32A00F48E5E /* ARSpriteDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARSpriteDemoUITests.m; sourceTree = "<group>"; };
 		2B30B9951EFBD32A00F48E5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B4D395420E1F898009D37EF /* message_icon_helijia@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "message_icon_helijia@2x.png"; sourceTree = "<group>"; };
 		2B9E44A920C692190088C5C4 /* img_loadiing_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "img_loadiing_1@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,8 +116,9 @@
 				2B30B96F1EFBD32900F48E5E /* Scene.h */,
 				2B30B9701EFBD32900F48E5E /* Scene.m */,
 				2B30B9721EFBD32900F48E5E /* ViewController.h */,
-				2B9E44A920C692190088C5C4 /* img_loadiing_1@2x.png */,
 				2B30B9731EFBD32900F48E5E /* ViewController.m */,
+				2B9E44A920C692190088C5C4 /* img_loadiing_1@2x.png */,
+				2B4D395420E1F898009D37EF /* message_icon_helijia@2x.png */,
 				2B30B9751EFBD32900F48E5E /* Main.storyboard */,
 				2B30B9781EFBD32900F48E5E /* Assets.xcassets */,
 				2B30B97A1EFBD32900F48E5E /* LaunchScreen.storyboard */,
@@ -250,6 +253,7 @@
 				2B30B96E1EFBD32900F48E5E /* Scene.sks in Resources */,
 				2B30B97C1EFBD32900F48E5E /* LaunchScreen.storyboard in Resources */,
 				2B30B9791EFBD32900F48E5E /* Assets.xcassets in Resources */,
+				2B4D395520E1F899009D37EF /* message_icon_helijia@2x.png in Resources */,
 				2B30B9771EFBD32900F48E5E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

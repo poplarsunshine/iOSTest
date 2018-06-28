@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="057-kT-7US">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                            <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uib-E2-aoA">
+                                <rect key="frame" x="16" y="617.5" width="210" height="29.5"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="1W6-7U-iTp">
+                                    <rect key="frame" x="0.0" y="0.0" width="210" height="29.5"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Init AR session." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNd-gM-cnk">
+                                            <rect key="frame" x="5" y="5" width="200" height="19.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="200" id="Dcz-HL-fXR"/>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="i53-k9-0BF"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.94901960780000005" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="jNd-gM-cnk" firstAttribute="leading" secondItem="1W6-7U-iTp" secondAttribute="leading" constant="5" id="Ax2-Hc-NbA"/>
+                                        <constraint firstAttribute="trailing" secondItem="jNd-gM-cnk" secondAttribute="trailing" constant="5" id="IJY-vV-WoV"/>
+                                        <constraint firstAttribute="bottom" secondItem="jNd-gM-cnk" secondAttribute="bottom" constant="5" id="NVc-G2-rWS"/>
+                                        <constraint firstItem="jNd-gM-cnk" firstAttribute="top" secondItem="1W6-7U-iTp" secondAttribute="top" constant="5" id="rKW-Gr-FC5"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uib-E2-aoA" secondAttribute="bottom" constant="20" id="2ca-Lg-iwM"/>
+                            <constraint firstItem="057-kT-7US" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MJA-sU-T1v"/>
+                            <constraint firstItem="057-kT-7US" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ZNQ-ld-fis"/>
+                            <constraint firstItem="057-kT-7US" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="qDX-2z-ejh"/>
+                            <constraint firstItem="uib-E2-aoA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="rvh-LE-4L8"/>
+                            <constraint firstItem="057-kT-7US" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ukP-1e-ZsM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="057-kT-7US" id="pn3-jn-Zvd"/>
+                        <outlet property="sessionInfoLabel" destination="jNd-gM-cnk" id="3CX-VF-9mz"/>
+                        <outlet property="sessionInfoView" destination="1W6-7U-iTp" id="kyY-GK-7go"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="99.400299850074973"/>
+        </scene>
+    </scenes>
+</document>

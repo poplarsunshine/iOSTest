@@ -66,7 +66,10 @@
 //    labelNode.verticalAlignmentMode = SKLabelVerticalAlignmentModeCenter;
 //    return labelNode;
     
-    SKSpriteNode *sNode = [SKSpriteNode spriteNodeWithImageNamed:@"img_loadiing_1"];
+//    SKSpriteNode *sNode = [SKSpriteNode spriteNodeWithImageNamed:@"img_loadiing_1"];
+    SKSpriteNode *sNode = [SKSpriteNode spriteNodeWithImageNamed:@"message_icon_helijia"];
+
+    
     return sNode;
 }
 
