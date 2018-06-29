@@ -16,6 +16,8 @@
 @property(nonatomic, weak) IBOutlet UILabel *sessionInfoLabel;
 @property(nonatomic, weak) IBOutlet ARSCNView *sceneView;
 
+@property(nonatomic, strong) NSDictionary *fileDic;
+
 @end
 
 @implementation ImageAnchorViewController
@@ -23,6 +25,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    self.fileDic = @{@"image_hetao" : @"helijia_AD"
+                     ,@"image_plant" : @"plane_view"
+                     };
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -50,6 +56,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)resetSelector:(id)sender
+{
+    [self resetTracking];
+}
+
 // MARK: - ARSCNViewDelegate
 - (void)renderer:(id <SCNSceneRenderer>)renderer didAddNode:(SCNNode *)node forAnchor:(ARAnchor *)anchor
 {
@@ -62,20 +73,23 @@
                                             height:height];
         
         //添加视频node
-        plane.firstMaterial = [self videoMaterial];
+        NSString *fileName = self.fileDic[imageAnchor.referenceImage.name];
+        plane.firstMaterial = [self videoMaterial:fileName];
         
         //
         SCNNode *planeNode = [SCNNode nodeWithGeometry:plane];
 //        planeNode.opacity = 0.95;
+        // x y z = 右，前，下
+        planeNode.position = SCNVector3Make(0, height / 20, height * 1.1);
         [planeNode setEulerAngles:SCNVector3Make(- 3.14159265 / 2, planeNode.eulerAngles.y, planeNode.eulerAngles.z)];
         
         [node addChildNode:planeNode];
     }
 }
 
-- (SCNMaterial *)videoMaterial
+- (SCNMaterial *)videoMaterial:(NSString *)fileName
 {
-    NSString *urlString = [[NSBundle mainBundle] pathForResource:@"helijiaAD" ofType:@"mp4"];
+    NSString *urlString = [[NSBundle mainBundle] pathForResource:fileName ofType:@"mp4"];
     NSURL *fileUrl = [NSURL fileURLWithPath:urlString];
     AVPlayerItem *item = [[AVPlayerItem alloc] initWithURL:fileUrl];
     AVPlayer *player = [[AVPlayer alloc] initWithPlayerItem:item];
@@ -153,7 +167,6 @@
     // Update the UI to provide feedback on the state of the AR experience.
     NSString *message;
     
-    
     switch (trackingState) {
         case ARTrackingStateNormal:
             // No planes detected; provide instructions for this app's AR interactions.
@@ -177,11 +190,19 @@
 
 - (void)resetTracking
 {
-    // Boundle Image
-    UIImage *image = [UIImage imageNamed:@"imac-21"];
-    CGImageRef cgImage = image.CGImage;
-    ARReferenceImage *arImage = [[ARReferenceImage alloc] initWithCGImage:cgImage orientation:kCGImagePropertyOrientationUp physicalWidth:0.2];
-    NSSet<ARReferenceImage *> *referenceIamges = [NSSet setWithObject:arImage];
+    NSArray *imageNames = self.fileDic.allKeys;
+    
+    NSMutableSet<ARReferenceImage *> *referenceIamges = [[NSMutableSet alloc] init];
+    for (NSString *name in imageNames) {
+        // Boundle Image
+        UIImage *image = [UIImage imageNamed:name];
+        CGImageRef cgImage = image.CGImage;
+        ARReferenceImage *arImage = [[ARReferenceImage alloc] initWithCGImage:cgImage orientation:kCGImagePropertyOrientationUp physicalWidth:0.2];
+        arImage.name = name;
+        
+        [referenceIamges addObject:arImage];
+    }
+
     
     // AR_Resources Image
 //    NSSet<ARReferenceImage *> *referenceIamges = [ARReferenceImage referenceImagesInGroupNamed:@"AR_Resources" bundle:nil];
@@ -189,7 +210,7 @@
     ARWorldTrackingConfiguration *configuration = [[ARWorldTrackingConfiguration alloc] init];
     configuration.detectionImages = referenceIamges;
     [self.sceneView.session runWithConfiguration:configuration
-                                         options:(ARSessionRunOptionResetTracking | ARSessionRunOptionRemoveExistingAnchors)];
+                                         options:ARSessionRunOptionRemoveExistingAnchors];
 }
 
 @end
