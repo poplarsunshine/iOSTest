@@ -15,6 +15,8 @@
 		2B43017320E4E3B300C612A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B43017220E4E3B300C612A3 /* main.m */; };
 		2B43017D20E4E3B300C612A3 /* ImageToVideoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B43017C20E4E3B300C612A3 /* ImageToVideoTests.m */; };
 		2B43018820E4E3B300C612A3 /* ImageToVideoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B43018720E4E3B300C612A3 /* ImageToVideoUITests.m */; };
+		2B43019720E5D41500C612A3 /* ImageAnchorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B43019620E5D41500C612A3 /* ImageAnchorViewController.m */; };
+		2B43019A20E5E2E900C612A3 /* helijiaAD.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2B43019920E5E2E900C612A3 /* helijiaAD.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,9 @@
 		2B43018320E4E3B300C612A3 /* ImageToVideoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageToVideoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B43018720E4E3B300C612A3 /* ImageToVideoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageToVideoUITests.m; sourceTree = "<group>"; };
 		2B43018920E4E3B300C612A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B43019520E5D41500C612A3 /* ImageAnchorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageAnchorViewController.h; sourceTree = "<group>"; };
+		2B43019620E5D41500C612A3 /* ImageAnchorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageAnchorViewController.m; sourceTree = "<group>"; };
+		2B43019920E5E2E900C612A3 /* helijiaAD.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = helijiaAD.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,11 +110,14 @@
 				2B43016420E4E3B100C612A3 /* AppDelegate.m */,
 				2B43016620E4E3B100C612A3 /* ViewController.h */,
 				2B43016720E4E3B100C612A3 /* ViewController.m */,
+				2B43019520E5D41500C612A3 /* ImageAnchorViewController.h */,
+				2B43019620E5D41500C612A3 /* ImageAnchorViewController.m */,
 				2B43016920E4E3B100C612A3 /* Main.storyboard */,
 				2B43016C20E4E3B300C612A3 /* Assets.xcassets */,
 				2B43016E20E4E3B300C612A3 /* LaunchScreen.storyboard */,
 				2B43017120E4E3B300C612A3 /* Info.plist */,
 				2B43017220E4E3B300C612A3 /* main.m */,
+				2B43019920E5E2E900C612A3 /* helijiaAD.mp4 */,
 			);
 			path = ImageToVideo;
 			sourceTree = "<group>";
@@ -238,6 +246,7 @@
 				2B43017020E4E3B300C612A3 /* LaunchScreen.storyboard in Resources */,
 				2B43016D20E4E3B300C612A3 /* Assets.xcassets in Resources */,
 				2B43016B20E4E3B100C612A3 /* Main.storyboard in Resources */,
+				2B43019A20E5E2E900C612A3 /* helijiaAD.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +274,7 @@
 				2B43016820E4E3B100C612A3 /* ViewController.m in Sources */,
 				2B43017320E4E3B300C612A3 /* main.m in Sources */,
 				2B43016520E4E3B100C612A3 /* AppDelegate.m in Sources */,
+				2B43019720E5D41500C612A3 /* ImageAnchorViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
