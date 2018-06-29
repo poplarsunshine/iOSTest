@@ -56,35 +56,44 @@
     if ([anchor isKindOfClass:[ARImageAnchor class]]) {
         NSLog(@"didAddNode");
         ARImageAnchor *imageAnchor = (ARImageAnchor *)anchor;
-        SCNPlane *plane = [SCNPlane planeWithWidth:imageAnchor.referenceImage.physicalSize.width
-                                            height:imageAnchor.referenceImage.physicalSize.height];
+        float width = imageAnchor.referenceImage.physicalSize.width;
+        float height = width * 9 / 16;
+        SCNPlane *plane = [SCNPlane planeWithWidth:width
+                                            height:height];
         
         //添加视频node
-        NSString *urlString = [[NSBundle mainBundle] pathForResource:@"helijiaAD" ofType:@"mp4"];
-        NSURL *fileUrl = [NSURL fileURLWithPath:urlString];
-        AVPlayerItem *item = [[AVPlayerItem alloc] initWithURL:fileUrl];
-        AVPlayer *player = [[AVPlayer alloc] initWithPlayerItem:item];
-        SKVideoNode *videoNode = [[SKVideoNode alloc] initWithAVPlayer:player];
-        CGSize size = CGSizeMake(1600, 900);
-        videoNode.size = size;
-        videoNode.position = CGPointMake(size.width * 0.5, size.height * 0.5);
-        videoNode.yScale = -1;
-        SKScene *vedioScene = [[SKScene alloc] initWithSize:size];
-        [vedioScene addChild:videoNode];
-        
-        SCNMaterial *material = [[SCNMaterial alloc] init];
-        material.diffuse.contents = vedioScene;
-        plane.firstMaterial = material;
-        
-        [player play];
+        plane.firstMaterial = [self videoMaterial];
         
         //
         SCNNode *planeNode = [SCNNode nodeWithGeometry:plane];
-        planeNode.opacity = 0.5;
-        [planeNode setEulerAngles:SCNVector3Make(- 3.1416 / 2, planeNode.eulerAngles.y, planeNode.eulerAngles.z)];
+//        planeNode.opacity = 0.95;
+        [planeNode setEulerAngles:SCNVector3Make(- 3.14159265 / 2, planeNode.eulerAngles.y, planeNode.eulerAngles.z)];
         
         [node addChildNode:planeNode];
     }
+}
+
+- (SCNMaterial *)videoMaterial
+{
+    NSString *urlString = [[NSBundle mainBundle] pathForResource:@"helijiaAD" ofType:@"mp4"];
+    NSURL *fileUrl = [NSURL fileURLWithPath:urlString];
+    AVPlayerItem *item = [[AVPlayerItem alloc] initWithURL:fileUrl];
+    AVPlayer *player = [[AVPlayer alloc] initWithPlayerItem:item];
+    
+    SKVideoNode *videoNode = [[SKVideoNode alloc] initWithAVPlayer:player];
+    CGSize size = CGSizeMake(1600, 900);
+    videoNode.size = size;
+    videoNode.position = CGPointMake(size.width * 0.5, size.height * 0.5);
+    videoNode.yScale = -1;
+    SKScene *vedioScene = [[SKScene alloc] initWithSize:size];
+    [vedioScene addChild:videoNode];
+    
+    SCNMaterial *material = [[SCNMaterial alloc] init];
+    material.diffuse.contents = vedioScene;
+    
+    [player play];
+
+    return material;
 }
 
 - (void)renderer:(id <SCNSceneRenderer>)renderer didUpdateNode:(SCNNode *)node forAnchor:(ARAnchor *)anchor
@@ -95,8 +104,10 @@
         SCNNode *planeNode = node.childNodes.firstObject;
         SCNPlane *plane = (SCNPlane *)planeNode.geometry;
         
-        plane.width = (CGFloat)imageAnchor.referenceImage.physicalSize.width;
-        plane.height = (CGFloat)imageAnchor.referenceImage.physicalSize.height;
+        float width = imageAnchor.referenceImage.physicalSize.width;
+        float height = width * 9 / 16;
+        plane.width = width;
+        plane.height = height;
     }
 }
 
@@ -166,7 +177,15 @@
 
 - (void)resetTracking
 {
-    NSSet<ARReferenceImage *> *referenceIamges = [ARReferenceImage referenceImagesInGroupNamed:@"AR_Resources" bundle:nil];
+    // Boundle Image
+    UIImage *image = [UIImage imageNamed:@"imac-21"];
+    CGImageRef cgImage = image.CGImage;
+    ARReferenceImage *arImage = [[ARReferenceImage alloc] initWithCGImage:cgImage orientation:kCGImagePropertyOrientationUp physicalWidth:0.2];
+    NSSet<ARReferenceImage *> *referenceIamges = [NSSet setWithObject:arImage];
+    
+    // AR_Resources Image
+//    NSSet<ARReferenceImage *> *referenceIamges = [ARReferenceImage referenceImagesInGroupNamed:@"AR_Resources" bundle:nil];
+    
     ARWorldTrackingConfiguration *configuration = [[ARWorldTrackingConfiguration alloc] init];
     configuration.detectionImages = referenceIamges;
     [self.sceneView.session runWithConfiguration:configuration

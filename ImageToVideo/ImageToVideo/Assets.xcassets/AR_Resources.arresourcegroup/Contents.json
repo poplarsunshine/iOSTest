@@ -5,7 +5,16 @@
   },
   "resources" : [
     {
+      "filename" : "imac-21.arreferenceimage"
+    },
+    {
+      "filename" : "ipad-12.9.arreferenceimage"
+    },
+    {
       "filename" : "iphone-4.7.arreferenceimage"
+    },
+    {
+      "filename" : "iphone-5.5.arreferenceimage"
     }
   ]
 }

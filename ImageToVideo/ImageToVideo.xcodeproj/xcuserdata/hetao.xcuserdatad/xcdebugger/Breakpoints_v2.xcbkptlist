@@ -90,12 +90,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ImageToVideo/ImageAnchorViewController.m"
-            timestampString = "551947351.559104"
+            timestampString = "551952405.014905"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
-            landmarkName = "-renderer:didAddNode:forAnchor:"
+            startingLineNumber = "189"
+            endingLineNumber = "189"
+            landmarkName = "-resetTracking"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
