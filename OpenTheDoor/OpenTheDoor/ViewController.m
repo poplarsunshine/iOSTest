@@ -14,16 +14,25 @@
  1-1后门  door_guid=BDD4001702-4854&door_id=619590
  1-1前门  door_guid=BDD4001702-5620&door_id=643804
  东门     door_guid=BDD4001702-4888&door_id=618448
+ 南门     door_guid=BDD4001702-4267&door_id=617353
+ 西门     door_guid=BDD4001702-4592&door_id=613725
+ 北门     door_guid=BDD4001702-3759&door_id=643492
+
  */
 typedef enum : NSUInteger {
     DoorType_11back   = 0,   //1号楼一单元前门
     DoorType_11front  = 1,   //1号楼一单元后门
     DoorType_East     = 2,   //东门
+    DoorType_South    = 3,   //南门
+    DoorType_West     = 4,   //西门
+    DoorType_North    = 5,   //北门
+
 } DoorType;
 
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *tipLb;
+@property (weak, nonatomic) IBOutlet UILabel *messageLb;
 
 - (IBAction)btnAction:(id)sender;
 
@@ -70,6 +79,21 @@ typedef enum : NSUInteger {
             door_id = @"618448";
             doorName = @"东门";
             break;
+        case DoorType_South:
+            door_guid = @"BDD4001702-4267";
+            door_id = @"617353";
+            doorName = @"南门";
+            break;
+        case DoorType_West:
+            door_guid = @"BDD4001702-4592";
+            door_id = @"613725";
+            doorName = @"西门";
+            break;
+        case DoorType_North:
+            door_guid = @"BDD4001702-3759";
+            door_id = @"643492";
+            doorName = @"北门";
+            break;
         default:
             door_guid = @"BDD4001702-4854";
             door_id = @"619590";
@@ -112,13 +136,19 @@ typedef enum : NSUInteger {
     NSHTTPURLResponse* urlResponse = nil;
     NSError *error = [[NSError alloc] init];
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&urlResponse error:&error];
-    NSString *result = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-    
-    NSLog(@"result=%@", result);
-    NSString *success = [result isEqualToString:@"[]"] ? @"成功" : @"失败";
+//    NSString *result = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+    NSDictionary *resultDic = [NSJSONSerialization JSONObjectWithData:responseData
+                                                        options:NSJSONReadingMutableContainers
+                                                          error:&error];
+    NSLog(@"resultDic=%@", resultDic);
+    BOOL isOpen = [resultDic count] == 0;
+    NSString *success = isOpen ? @"成功" : @"失败";
     NSString *msg = [NSString stringWithFormat:@"开启%@%@", doorName, success];
+    NSString *reason = isOpen ? @"" : resultDic[@"message"];
 
     self.tipLb.text = msg;
+    self.messageLb.text = reason;
+
 //    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:msg preferredStyle:UIAlertControllerStyleAlert];
 //    [alert addAction:([UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:nil])];
 //    [self presentViewController:alert animated:YES completion:nil];
